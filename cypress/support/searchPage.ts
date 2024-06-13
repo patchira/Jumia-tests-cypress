@@ -1,11 +1,14 @@
 export class SearchPage {
     visit() {
         cy.visit('https://www.jumia.co.ke/');
+        cy.wait(1000);
     }
 
     searchProduct(product: string) {
         cy.get('input[name="q"]').type(product, {force: true});
+        cy.wait(1000);
         cy.get('.btn._prim._md.-mls.-fsh0').click({force: true});
+        cy.wait(1000);
     }
 
     getSearchResults() {

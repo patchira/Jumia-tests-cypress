@@ -4,6 +4,8 @@ export class ProductPage {
     }
 
     addToCart() {
+        cy.wait(1000);
         cy.get('button').contains('Add to cart').click();
+        cy.wait(1000);
     }
 }
